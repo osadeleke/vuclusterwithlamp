@@ -9,9 +9,7 @@ Automate the deployment of a Vagrant-based Ubuntu cluster with a LAMP (Linux, Ap
 - [Usage](#usage)
 - [Customization](#customization)
 - [Process Overview](#process-overview)
-- [Deliverables](#deliverables)
-- [Contributing](#contributing)
-- [License](#license)
+- [Author](#author)
 
 ## Prerequisites
 
@@ -47,3 +45,25 @@ Before you begin, ensure you have the following prerequisites in place:
 
 ### Customization
 You can customize the deployment process by modifying the deploy.sh script. 
+
+### Process Overview
+#### User Management
+- A user named altschool is created on the Master node
+- altschool is granted root privileges on the Master Node
+#### Inter-Node Communication
+- SSH Key-based authentication is enabled
+- The Master node (as the altschool user) can SSH into the Slave node withour requiring a password
+  ```bash
+  ssh slave
+#### Data Management and Transfer
+- On initiation, the contents of the /mnt/altschool directory (random content are created in the directory in the script to test) on the Master node are copied to /mnt/altschool/slave on the Slave node. This operation is performed using the altschool user from the Master node.
+
+### LAMP Stack Deployment
+- A LAMP stack (Linux, Apache, MySQL, PHP) is installed on both nodes.
+- Apache is set to run on boot.
+- MySQL is secured and initialized with a default user and password.
+- New MySQL database and user are created with password enabled.
+- PHP functionality with Apache is validated.
+
+### Author
+[Olusegun Adeleke](https://www.github.com/osadeleke)
