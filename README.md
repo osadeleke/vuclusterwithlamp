@@ -25,15 +25,15 @@ Before you begin, ensure you have the following prerequisites in place:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/vagrant-ubuntu-cluster-lamp.git
+   git clone https://github.com/osadeleke/vuclusterwithlamp.git
   
 2. Navigate to the project directory:
    ```bash
-   cd vagrant-ubuntu-cluster-lamp
+   cd vuclusterwithlamp
 
 4. Make sure the deployment script is executable:
    ```bash
-   chmod +x deploy.sh
+   chmod +x deployinstall.sh
 
 ## Usage
 
